@@ -2,24 +2,15 @@ import React, { Component, Fragment } from "react";
 import { render } from "react-dom";
 
 import Button from "./Button";
+import "./style.scss";
 
 class App extends Component {
   state = {
     counter: 0
   };
 
-  componentDidMount() {}
-
-  componentWillMount() {}
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.counter <= 10;
-  }
-
-  componentDidUpdate(prevProps, prevState) {}
   handleClick = () => {
     this.setState(state => ({ counter: this.state.counter + 1 }));
-    console.log(this.state.counter);
   };
 
   render() {
