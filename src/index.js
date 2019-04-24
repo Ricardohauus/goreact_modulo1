@@ -1,12 +1,13 @@
-import React, { Component, Fragment } from 'react';
-import { render } from 'react-dom';
+import React, { Component, Fragment } from "react";
+import { render } from "react-dom";
 
-import Button from './Button';
-import './style.scss';
+import Button from "./Button";
+import Header from "./Header";
+import "./style.scss";
 
 class App extends Component {
   state = {
-    counter: 0,
+    counter: 0
   };
 
   handleClick = () => {
@@ -18,12 +19,10 @@ class App extends Component {
     const { counter } = this.state;
     return (
       <Fragment>
-        <h1>Hello Rocketseat</h1>
-        <h1>{counter}</h1>
-        <Button onClick={this.handleClick}>Somar</Button>
+        <Header />
       </Fragment>
     );
   }
 }
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById("app"));
