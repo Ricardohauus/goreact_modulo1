@@ -1,28 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import { render } from "react-dom";
+import App from "./App";
 
-import Button from "./Button";
-import Header from "./Header";
-import "./style.scss";
-
-class App extends Component {
-  state = {
-    counter: 0
-  };
-
-  handleClick = () => {
-    const { counter } = this.state;
-    this.setState({ counter: counter + 1 });
-  };
-
-  render() {
-    const { counter } = this.state;
-    return (
-      <Fragment>
-        <Header />
-      </Fragment>
-    );
-  }
-}
+import "./styles/app.scss";
 
 render(<App />, document.getElementById("app"));
